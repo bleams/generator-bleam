@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # generator-bleam [![Build Status](https://secure.travis-ci.org/bleams/generator-bleam.png?branch=master)](https://travis-ci.org/bleams/generator-bleam)
 
 > [Yeoman](http://yeoman.io) generator
@@ -46,3 +47,10 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 MIT
 # generator-bleam
+=======
+# generator-bleam
+Starting assets for a custom yeoman generator (practice exercice)
+
+Simple project generator based on yeoman generator modele for scaffolding front end projects
+This is mostly a "lab-test"
+>>>>>>> e4d663ebfd9fa7d9538999f395299f73b40bf0a8
