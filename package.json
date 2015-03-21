@@ -6,8 +6,8 @@
   "main": "app/index.js",
   "repository": "bleams/generator-bleam",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "George Bleam",
+    "email": "bleams@hotmail.com",
     "url": "https://github.com/bleams"
   },
   "engines": {
