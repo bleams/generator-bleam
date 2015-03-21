@@ -68,21 +68,26 @@ BleamGulpGenerator.prototype.app = function app() {
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
 
-  this.copy('index.html','app/index.html');
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-  this.copy("_gulpfile.js", "gulpfile.js");
-  this.copy("_normalize.min.css", "app/css/normalize.min.css");
-  this.copy("_main.scss", "app/sass/main.scss");
-  this.copy("_.bowerrc", ".bowerrc");
-  this.copy("_app.js", "app/js/app.js");
-  this.copy("_modernizr-2.6.2.min.js", "app/js/vendor/modernizr-2.6.2.min.js");
-  this.copy("_jquery-1.11.1.min.js", "app/js/vendor/jquery-1.11.1.min.js");
+  this.template('index.html','app/index.html');
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
+  this.template("_gulpfile.js", "gulpfile.js");
+  this.template("_normalize.min.css", "app/css/normalize.min.css");
+  this.template("_main.scss", "app/sass/main.scss");
+  this.template("_.bowerrc", ".bowerrc");
+  this.template("_app.js", "app/js/app.js");
+  this.template("_modernizr-2.6.2.min.js", "app/js/vendor/modernizr-2.6.2.min.js");
+  this.template("_jquery-1.11.1.min.js", "app/js/vendor/jquery-1.11.1.min.js");
 };
 
 BleamGulpGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
+};
+
+BlogGenerator.prototype.runtime = function runtime() {
+  this.copy('bowerrc', '.bowerrc');
+  this.copy('gitignore', '.gitignore');
 };
 
 
