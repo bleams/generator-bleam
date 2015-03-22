@@ -1,6 +1,6 @@
 {
   "name": "generator-bleam",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -25,7 +25,8 @@
   "dependencies": {
     "yeoman-generator": "^0.18.9",
     "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "yosay": "^1.0.2",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "mocha": "*"
