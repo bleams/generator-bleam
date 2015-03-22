@@ -41,13 +41,9 @@ BleamGulpGenerator.prototype.app = function app() {
   this.mkdir("app/js");
   this.mkdir("app/js/vendor");
 
-  // 'this.copy' then removes the _ and places the files to the user's root directory (BlogGenerator.prototype._dontRunMe.)
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-
   this.template('index.html','app/index.html');
-  //this.template('_package.json', 'package.json');
-  //this.template('_bower.json', 'bower.json');
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
   this.template("_gulpfile.js", "gulpfile.js");
   this.template("_normalize.min.css", "app/css/normalize.min.css");
   this.template("_main.scss", "app/sass/main.scss");
