@@ -45,8 +45,8 @@ BleamGulpGenerator.prototype.app = function app() {
   this.copy('_bower.json', 'bower.json');
 
   this.template('index.html','app/index.html');
-  this.template('_package.json', 'package.json');
-  this.template('_bower.json', 'bower.json');
+  //this.template('_package.json', 'package.json');
+  //this.template('_bower.json', 'bower.json');
   this.template("_gulpfile.js", "gulpfile.js");
   this.template("_normalize.min.css", "app/css/normalize.min.css");
   this.template("_main.scss", "app/sass/main.scss");
