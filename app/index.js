@@ -14,7 +14,9 @@ var BleamGulpGenerator = module.exports = function BleamGulpGenerator(args, opti
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+    this.installDependencies({
+      skipInstall: options['skip-install']
+    });
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -25,29 +27,22 @@ util.inherits(BleamGulpGenerator, yeoman.generators.NamedBase);
 BleamGulpGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
-  // ...
+  var prompts = [{
+    name: 'projName',
+    message: 'What do you want to call your Project?'
+  }];
 
   this.prompt(prompts, function (err, props) {
-    // ...
+    if (err) {
+      return this.emit('error', err);
+    }
+
+    this.projName = props.projName;
 
     cb();
   }.bind(this));
 };
 
-var prompts = [{
-  name: 'projName',
-  message: 'What do you want to call your Project?'
-}];
-
-this.prompt(prompts, function (err, props) {
-  if (err) {
-    return this.emit('error', err);
-  }
-
-  this.projName = props.projName;
-
-  cb();
-}.bind(this));
 
 BleamGulpGenerator.prototype.app = function app() {
   // this.mkdir creates a directory in the directory the user is running your generator from
