@@ -58,7 +58,6 @@ BleamGulpGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('jshintrc', '.jshintrc');
 };
 
-BleamGulpGenerator.prototype.runtime = function runtime() {
-  this.copy('bowerrc', '.bowerrc');
+BleamGulpGenerator.prototype.gitfiles = function gitfiles() {
   this.copy('gitignore', '.gitignore');
 };
